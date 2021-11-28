@@ -1,0 +1,30 @@
+/* Open Header  */
+.header {
+    background-color: aqua;
+}
+
+
+.header .listMenu {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+/* Lose  header */
+
+
+
+/* Open main Content */
+.mainContent {
+    background-color: #fafafa;
+}
+/* Close main Content  */
+
+
+
+
+/* Open footer */
+.footer {
+    background-color: black;
+}
+/* Lose footer */
