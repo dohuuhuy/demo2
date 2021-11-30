@@ -8,6 +8,7 @@ const HeaderPublic = () => {
       <Container>
         <p>menu đây</p>
       </Container>
+      <input type='text' placeholder='helo' name='fullname' />
     </header>
   )
 }
