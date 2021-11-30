@@ -1,20 +1,49 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "allowJs": false,
     "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "lib": ["dom", "es2017", "dom.iterable", "esnext"],
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "paths": {
+      "@assets/*": ["./assets/*"],
+      "@public/*": ["./public/*"],
+
+      "@utils/*": ["./src/utils/*"],
+      "@config/*": ["./src/config/*"],
+
+      "@components/*": ["./src/components/*"],
+      "@componentsTest/*": ["./test/components/*"],
+
+      "@store/*": ["./src/store/*"],
+      "@componentStore/*": ["src/store/componentStore/*"],
+      "@actionStore/*": ["./src/store/actionStore/*"]
+    },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "assets/js/wechat.js",
+    "src/utils/json mẫu/bvtest.ts"
+  ],
+  "exclude": ["node_modules", "dist", ".next", "out", "next.config.js"]
 }
