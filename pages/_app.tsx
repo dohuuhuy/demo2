@@ -1,17 +1,15 @@
-import '@assets/styles/app.less'
+import 'public/assets/styles/app.less'
 import { OnTop } from '@components/atoms/OnTop'
-
+import SEO from '@components/SEO/next-seo.config'
+import { getListPartners } from '@store/actionStore'
+import { AppState } from '@store/interface'
+import { wrapper } from '@store/rootStore'
 import 'antd/dist/antd.css'
 import { DefaultSeo } from 'next-seo'
+import NextNProgress from 'nextjs-progressbar'
 import React, { Fragment, useEffect } from 'react'
 import { Provider, useDispatch, useSelector, useStore } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
-import SEO from '@components/SEO/next-seo.config'
-import NextNProgress from 'nextjs-progressbar'
-import { AppState } from '@store/interface'
-
-import { wrapper } from '@store/rootStore'
-import { getListPartners } from '@store/actionStore'
 
 const MyApp = ({ Component, pageProps }: any) => {
   const Layout = Component?.Layout ?? Fragment

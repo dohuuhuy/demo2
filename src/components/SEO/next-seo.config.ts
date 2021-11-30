@@ -1,14 +1,12 @@
 const SEO_DEFAULT = {
-  title: 'Medpro - Đặt lịch khám số 1 Việt Nam',
-  description:
-    'Medpro, đặt khám trực tuyến, thanh toán viện phí, nhắc uống thuốc, khám chuyên khoa, bác sĩ, tư vấn sức khoẻ từ xa',
+  title: 'Lading page nextjs demo 1',
+  description: 'Đây là SEO default của lading page này ',
   canonical: 'https://medpro.vn/',
   noindex: true,
   openGraph: {
     url: 'https://medpro.vn/',
-    title: 'Medpro - Đặt lịch khám số 1 Việt Nam',
-    description:
-      'Medpro, đặt khám trực tuyến, thanh toán viện phí, nhắc uống thuốc, khám chuyên khoa, bác sĩ, tư vấn sức khoẻ từ xa',
+    title: 'Lading page nextjs demo 1',
+    description: 'Đây là SEO default của lading page này ',
     images: [
       {
         url: 'https://cms.medpro.com.vn/uploads/d_e1b14f67d2.jpg',
