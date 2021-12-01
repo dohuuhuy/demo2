@@ -2,7 +2,7 @@ import { getListPartners } from '@actionStore'
 import '@assets/styles/app.less'
 import { OnTop } from '@components/atoms/OnTop'
 import SEO from '@components/SEO/next-seo.config'
-import Loading from '@componentsTest/Loading'
+// import Loading from '@componentsTest/Loading'
 import DefaultLayout from '@src/components/templates/Default'
 import { wrapper } from '@src/store/rootStore'
 import { AppState } from '@store/interface'
@@ -49,7 +49,7 @@ const MyApp = ({ Component, pageProps }: any) => {
     <Layout>
       <DefaultSeo {...SEO} />
       <NextNProgress color='#00b5f1' height={1} />
-      {loading ? <Loading component /> : <Component {...pageProps} />}
+      {loading ? <p>loading ...</p> : <Component {...pageProps} />}
       <OnTop />
     </Layout>
   )
