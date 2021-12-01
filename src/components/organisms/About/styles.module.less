@@ -5,8 +5,7 @@
       .colCard {
         padding: 0 15px;
         display: flex;
-        align-content: center;
-        align-items: center;
+
         .card {
           .cardBody {
             padding: 40px 20px;
@@ -26,6 +25,7 @@
         }
       }
       .colImage {
+        min-height: 650px;
         padding: 0 15px;
         .listImageAbout {
           list-style-type: none;
@@ -44,8 +44,8 @@
               img {
                 max-width: 200px !important;
                 min-width: 200px !important;
-                max-height: 240px !important;
-                min-height: 240px !important;
+                max-height: 230px !important;
+                min-height: 230px !important;
               }
             }
           }
@@ -53,7 +53,13 @@
           .item_1 {
             grid-column: 2;
             grid-row: 1 / span 2;
-            // margin: auto;
+            margin-top: -20%;
+            figure {
+              img {
+                max-height: 380px !important;
+                min-height: 380px !important;
+              }
+            }
           }
 
           .item_2 {
@@ -62,8 +68,8 @@
               img {
                 max-width: 160px !important;
                 min-width: 160px !important;
-                max-height: 200px !important;
-                min-height: 200px !important;
+                max-height: 180px !important;
+                min-height: 180px !important;
               }
             }
           }
