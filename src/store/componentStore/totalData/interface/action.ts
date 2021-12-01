@@ -1,4 +1,4 @@
-import { TotalDataTypes } from '@store/interface'
+import { TotalDataTypes } from '@src/store/interface'
 
 export type TotalDataActions =
   | ListPartnersAction

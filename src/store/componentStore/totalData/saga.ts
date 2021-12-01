@@ -1,4 +1,4 @@
-import * as ac from '@store/actionStore'
+import * as ac from '@actionStore'
 import { client } from '@config/medproSDK'
 import { urlAddress, urlListPartners } from '@utils/contants'
 import { fetcher } from '@utils/func'
@@ -13,14 +13,14 @@ import {
   takeEvery,
   takeLatest
 } from 'redux-saga/effects'
-import { getData } from '@store/api'
+import { getData } from '@src/store/api'
 import {
   AppState,
   HospitalState,
   TotalDataState,
   TotalDataTypes,
   UserState
-} from '@store/interface'
+} from '@src/store/interface'
 
 function* getListPartners() {
   try {
@@ -47,22 +47,20 @@ function* getListPartners() {
 
     if (!total.partnerId) {
       yield put(ac.listPartnersRequestSuccess(response))
-
       yield put(ac.SetParnerId(partnerId))
-
-      yield put(
-        ac.FeatureRequest({
-          partnerId: partnerId,
-          typeReser: 'normal'
-        })
-      )
-
-      if (Object.keys(hospital.information).length < 1) {
-        yield put(ac.getHeader(partnerId))
-        yield put(ac.getBanners(partnerId))
-        yield put(ac.getFooter(partnerId))
-      }
     }
+
+    yield put(
+      ac.FeatureRequest({
+        partnerId: partnerId,
+        typeReser: 'normal'
+      })
+    )
+
+    if (!hospital.information.header) yield put(ac.getHeader(partnerId))
+    if (!hospital.information.banners) yield put(ac.getBanners(partnerId))
+    if (!hospital.information.footer) yield put(ac.getFooter(partnerId))
+
     yield put(ac.offLoading())
   } catch (error) {
     console.error(error)

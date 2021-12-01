@@ -1,4 +1,4 @@
-import { UserTypes } from '@store/interface'
+import { UserTypes } from '@src/store/interface'
 
 export type UserActions =
   | BillAction

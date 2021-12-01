@@ -1,4 +1,4 @@
-import { HosptailTypes } from '@store/interface'
+import { HosptailTypes } from '@src/store/interface'
 
 // Kiểm soát hàm thực hiện hành động ---------------------------------------------------------------------------
 

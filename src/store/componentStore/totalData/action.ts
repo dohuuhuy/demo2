@@ -2,7 +2,7 @@ import {
   TotalDataActions,
   TotalDataParams,
   TotalDataTypes
-} from '@store/interface'
+} from '@src/store/interface'
 
 // ---------------danh sách partner id -----------------------------------------------------------
 

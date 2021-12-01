@@ -1,5 +1,5 @@
-import * as ac from '@store/actionStore'
-import { currentEnv } from '@config/envs/env'
+import * as ac from '@actionStore'
+import { currentEnv } from '@src/config/envs'
 import { client } from '@config/medproSDK'
 import { AxiosResponse } from 'axios'
 import { all, fork, put, select, takeLatest } from 'redux-saga/effects'
@@ -8,7 +8,7 @@ import {
   TotalDataState,
   UserState,
   UserTypes
-} from '@store/interface'
+} from '@src/store/interface'
 
 function* listPatientRequest() {
   try {

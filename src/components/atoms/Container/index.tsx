@@ -1,5 +1,4 @@
 import cx from 'classnames'
-import { uniqueId } from 'lodash'
 import React, { ReactNode } from 'react'
 import styles from './styles.module.less'
 type Props = {
@@ -28,7 +27,6 @@ const Container = ({
 }: Props) => {
   return (
     <div
-      key={uniqueId()}
       id={id}
       style={style}
       className={cx(styles.container, classStyles, {

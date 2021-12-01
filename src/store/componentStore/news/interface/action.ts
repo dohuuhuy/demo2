@@ -1,4 +1,4 @@
-import { NewsTypes } from '@store/interface'
+import { NewsTypes } from '@src/store/interface'
 
 export type NewsActions =
   | NewsAndEventAction

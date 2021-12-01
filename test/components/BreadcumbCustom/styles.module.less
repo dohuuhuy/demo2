@@ -1,0 +1,55 @@
+.background {
+  background: linear-gradient(to bottom right, #2fa0ec, #05e3fd);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .background();
+  .Breadcrumb {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    li {
+      min-height: 25px;
+      display: flex;
+      padding-right: 5px;
+      align-content: center;
+      align-items: center;
+      margin: auto 0;
+      a {
+        font-size: 13px;
+        color: white !important;
+        padding-right: 5px;
+        &:hover {
+          color: whitesmoke !important;
+        }
+      }
+      span {
+        fill: white;
+        height: unset !important;
+      }
+
+      &:last-child {
+        span {
+          display: none;
+        }
+        a {
+          pointer-events: none; // vô hiệu hóa liên kết
+        }
+      }
+    }
+  }
+}

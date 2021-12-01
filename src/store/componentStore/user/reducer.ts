@@ -1,5 +1,5 @@
 import { HYDRATE } from 'next-redux-wrapper'
-import { UserActions, UserState, UserTypes } from '@store/interface'
+import { UserActions, UserState, UserTypes } from '@src/store/interface'
 
 const init: UserState = {
   userInfo: {

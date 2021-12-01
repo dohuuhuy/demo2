@@ -1,4 +1,4 @@
-import { NewsActions, NewsTypes } from '@store/interface'
+import { NewsActions, NewsTypes } from '@src/store/interface'
 
 export const getNewsAndEvent = (): NewsActions => {
   return {

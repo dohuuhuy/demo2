@@ -1,4 +1,4 @@
-import { NewsActions, NewsState, NewsTypes } from '@store/interface'
+import { NewsActions, NewsState, NewsTypes } from '@src/store/interface'
 import { HYDRATE } from 'next-redux-wrapper'
 
 const init: NewsState = {

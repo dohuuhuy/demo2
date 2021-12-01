@@ -1,28 +1,13 @@
-import Container from '@components/atoms/Container'
-import { Row, Col } from 'antd'
+import FooterCustom from '@componentsTest/FooterCustom'
+import { AppState } from '@store/interface'
 import React from 'react'
-import styles from './styles.module.scss'
+import { useSelector } from 'react-redux'
 
 const FooterPublic = () => {
-  return (
-    <footer className={styles.footer}>
-      <Container>
-        <Row>
-          <Col xl={24}>helo</Col>
-        </Row>
-        <Row>
-          <Col xl={24}>
-            <p>
-              @ Coppy rigt by{' '}
-              <a href='https://huyi.tk' target='_blank' rel="noreferrer">
-                Huyi
-              </a>
-            </p>
-          </Col>
-        </Row>
-      </Container>
-    </footer>
-  )
+  const hos = useSelector((state: AppState) => state.hospital)
+
+  if (!hos.information.footer) return null
+  return <FooterCustom dataFooter={hos.information.footer} />
 }
 
 export default FooterPublic

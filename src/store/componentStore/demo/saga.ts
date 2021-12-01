@@ -1,4 +1,4 @@
-import { demoActionTypes, demoParams } from '@store/interface'
+import { demoActionTypes, demoParams } from '@src/store/interface'
 import { all, fork, put, takeLatest } from 'redux-saga/effects'
 
 function* demoSaga({ nameColor }: demoParams.GetDemoParams) {

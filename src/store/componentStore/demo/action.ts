@@ -1,4 +1,4 @@
-import { demoAction, demoActionTypes, demoParams } from '@store/interface'
+import { demoAction, demoActionTypes, demoParams } from '@src/store/interface'
 
 export const getDemo = ({
   nameColor

@@ -1,10 +1,10 @@
-import * as ac from '@store/actionStore'
 import { client } from '@config/medproSDK'
 import { AppState, HospitalState, HosptailTypes } from '@store/interface'
 import { AxiosResponse } from 'axios'
 import { all, fork, put, select, takeLatest } from 'redux-saga/effects'
 import { fetcher } from '@utils/func'
 import { urlBanners, urlFooter, urlHeader } from '@utils/contants'
+import * as ac from '@store/actionStore'
 
 function* getHospitalDetails() {
   try {
@@ -137,8 +137,6 @@ function* getBookingTreeCurrentNode({}: any) {
   const hos: HospitalState = yield select((state: AppState) => state.hospital)
 
   const schedule = hos.schedule
-
-  console.log('schedule :>> ', schedule)
 
   try {
     console.log('schedule?.serive?.id :>> ', schedule?.serive?.id)

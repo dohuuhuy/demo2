@@ -2,7 +2,7 @@ import {
   TotalDataActions,
   TotalDataState,
   TotalDataTypes
-} from '@store/interface'
+} from '@src/store/interface'
 import { HYDRATE } from 'next-redux-wrapper'
 
 const initState: TotalDataState = {

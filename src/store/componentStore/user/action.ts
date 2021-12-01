@@ -1,4 +1,4 @@
-import { UserTypes, UserActions } from '@store/interface'
+import { UserTypes, UserActions } from '@src/store/interface'
 
 export const getBillInfo = (transactionId: any): UserActions => {
   return {

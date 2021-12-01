@@ -23,18 +23,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "paths": {
-      "@assets/*": ["./assets/*"],
-      "@public/*": ["./public/*"],
-
-      "@utils/*": ["./src/utils/*"],
+      "@src/*": ["./src/*"],
       "@config/*": ["./src/config/*"],
-
       "@components/*": ["./src/components/*"],
       "@componentsTest/*": ["./test/components/*"],
-
+      "@componentStore/*": ["./src/store/componentStore/*"],
+      "@actionStore": ["src/store/actionStore"],
       "@store/*": ["./src/store/*"],
-      "@componentStore/*": ["src/store/componentStore/*"],
-      "@actionStore/*": ["./src/store/actionStore/*"]
+      "@templates/*": ["./src/components/templates/*"],
+      "@assets/*": ["./public/assets/*"],
+      "@public/*": ["./public/*"],
+      "@utils/*": ["./src/utils/*"]
     },
     "incremental": true
   },

@@ -1,27 +1,42 @@
-import Container from '@components/atoms/Container'
-import { Button, Card } from 'antd'
-import React from 'react'
-import styles from './styles.module.less'
+import * as a from '@actionStore'
+import HeaderCustom from '@componentsTest/HeaderCustom'
+import { AppState } from '@store/interface'
+import { check } from '@utils/checkValue'
+import { filter } from 'lodash'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 const HeaderPublic = () => {
+  const dispatch = useDispatch()
+  const hos = useSelector((state: AppState) => state.hospital)
+  const user = useSelector((state: AppState) => state.user)
+
+  useEffect(() => {
+    check(user.userInfo.token) && dispatch(a.getNoti())
+  }, [])
+
+  const noRep = filter(user.noti, { isRead: false })
+
+  useEffect(() => {
+    if (check(user.userInfo.token)) {
+      const audio = new Audio(
+        'https://resource-testing.medpro.com.vn/static/upload/noti.mp3'
+      )
+      audio.play()
+    }
+  }, [noRep.length > 1])
+
+  if (!hos.information.header) return null
   return (
-    <header className={styles.header}>
-      <Container>
-        <h1>menu</h1>
-        <p>menu đây</p>
-      </Container>
-      <input type='text' placeholder='helo' name='fullname' />
-      <Button color='primary'>hello</Button>
-      <Card
-        title='Default size card'
-        extra={<a href='#'>More</a>}
-        style={{ width: 300 }}
-      >
-        <p>Card content</p>
-        <p>Card content</p>
-        <p>Card content</p>
-      </Card>
-    </header>
+    <>
+      <HeaderCustom
+        loginAt={a.loginAt}
+        loginMedproId={a.loginMedproId}
+        dataHeader={hos.information.header}
+        author={user.userInfo}
+        noti={user.noti}
+      />
+    </>
   )
 }
 

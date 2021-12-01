@@ -3,7 +3,7 @@ import {
   HospitalActions,
   HospitalState,
   HosptailTypes
-} from '@store/interface'
+} from '@src/store/interface'
 
 const init: HospitalState = {
   partnerId: '',

@@ -1,4 +1,4 @@
-import { demoAction, demoActionTypes, DemoState } from '@store/interface'
+import { demoAction, demoActionTypes, DemoState } from '@src/store/interface'
 import { HYDRATE } from 'next-redux-wrapper'
 
 const DemoInitialState: DemoState = {
