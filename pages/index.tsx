@@ -4,7 +4,9 @@ import React from 'react'
 const HomePage = ({ data }: any) => {
   return (
     <HomeLayout>
-      hello
+      <button className='btn btn-primary m-3'>KindaCode.com</button>
+      <button className='btn btn-warning m-3'>Hello</button>
+
       {data}
     </HomeLayout>
   )

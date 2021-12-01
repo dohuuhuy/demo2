@@ -23,7 +23,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "paths": {
-      "@assets/*": ["./public/assets/*"],
+      "@assets/*": ["./assets/*"],
       "@public/*": ["./public/*"],
 
       "@utils/*": ["./src/utils/*"],

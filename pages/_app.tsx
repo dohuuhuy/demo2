@@ -1,4 +1,4 @@
-import 'public/assets/styles/app.less'
+import '@assets/styles/app.less'
 import { OnTop } from '@components/atoms/OnTop'
 import SEO from '@components/SEO/next-seo.config'
 import { getListPartners } from '@store/actionStore'

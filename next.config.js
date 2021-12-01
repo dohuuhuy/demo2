@@ -11,10 +11,12 @@ const withLess = require('next-with-less')
 
 const themeVariables = lessToJS(
   fs.readFileSync(
-    path.resolve(__dirname, 'public/assets/styles/variable.less'),
+    path.resolve(__dirname, './assets/styles/variable.less'),
     'utf8'
   )
 )
+
+console.log(`themeVariables`, themeVariables)
 
 const lessConfig = {
   lessLoaderOptions: {
