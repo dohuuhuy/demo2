@@ -5,7 +5,7 @@ import styles from './styles.module.less'
 
 const Banners = () => {
   return (
-    <Container tag='section' fluid className={styles.Banners}>
+    <Container tag='section' fluid className={styles.Banners} id='About'>
       <Container className={styles.conBanners}>
         <Row className={styles.rowBanners}>
           <Col xl={12} lg={12} md={12} className={styles.colCardBanner}>

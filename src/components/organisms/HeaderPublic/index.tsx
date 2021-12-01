@@ -44,7 +44,7 @@ const menu = [
     sort: 1
   },
   {
-    slug: '/about',
+    slug: '#About',
     label: 'About',
     status: true,
     sort: 2

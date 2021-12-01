@@ -25,14 +25,11 @@ const About = () => {
           <Col xl={14} lg={14} md={14} className={styles.colCard}>
             <div className={styles.card}>
               <div className={styles.cardBody}>
-                <h1>Wellcome home by HUyi</h1>
-                <h3>
-                  Đã đến với bạn thì bạn phải mua cái gì mang về, không thể tay
-                  không được @@
-                </h3>
+                <h1>About us of Trực</h1>
+                <h3>TRực sẽ đấm nếu không mua, đừng có nhờn ^^</h3>
                 <p>Nếu còn cố chấp tôi sẽ gọi bảo vệ</p>
                 <button className={styles.btn}>
-                  <span>Mua đi</span>
+                  <span>Mua đi nhìn nữa !</span>
                 </button>
               </div>
             </div>
