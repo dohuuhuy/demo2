@@ -1,27 +1,21 @@
-import { getListPartners } from '@actionStore'
 import '@assets/styles/app.less'
 import { OnTop } from '@components/atoms/OnTop'
 import SEO from '@components/SEO/next-seo.config'
-// import Loading from '@componentsTest/Loading'
+import Loading from '@src/components/atoms/Loading'
 import DefaultLayout from '@src/components/templates/Default'
 import { wrapper } from '@src/store/rootStore'
-import { AppState } from '@store/interface'
 import 'antd/dist/antd.css'
 import { DefaultSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import NextNProgress from 'nextjs-progressbar'
-import React, { Fragment, useEffect } from 'react'
-import { Provider, useDispatch, useSelector, useStore } from 'react-redux'
+import React, { Fragment } from 'react'
+import { Provider, useStore } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 
 const MyApp = ({ Component, pageProps }: any) => {
   const store: any = useStore()
   const router = useRouter()
-  const dispatch = useDispatch()
-
   const Layout = Component?.layout || DefaultLayout || Fragment
-
-  const total = useSelector((state: AppState) => state.total)
 
   const [loading, setloading] = React.useState<boolean>(false)
   React.useEffect(() => {
@@ -41,15 +35,11 @@ const MyApp = ({ Component, pageProps }: any) => {
     router.events.on('routeChangeError', handleComplete)
   }, [router])
 
-  useEffect(() => {
-    !total.partnerId && dispatch(getListPartners())
-  }, [total.partnerId, dispatch])
-
   const components = (
     <Layout>
       <DefaultSeo {...SEO} />
       <NextNProgress color='#00b5f1' height={1} />
-      {loading ? <p>loading ...</p> : <Component {...pageProps} />}
+      {loading ? <Loading component /> : <Component {...pageProps} />}
       <OnTop />
     </Layout>
   )

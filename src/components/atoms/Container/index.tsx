@@ -13,6 +13,7 @@ type Props = {
   md?: boolean
   sm?: boolean
   id?: string
+  tag?: any
 }
 
 export const Container = ({
@@ -24,10 +25,12 @@ export const Container = ({
   xl,
   md,
   sm,
-  id
+  id,
+  tag = 'div'
 }: Props) => {
+  const Tag = `${tag}` as keyof JSX.IntrinsicElements
   return (
-    <div
+    <Tag
       key={uniqueId()}
       id={id}
       style={style}
@@ -40,6 +43,6 @@ export const Container = ({
       })}
     >
       {children}
-    </div>
+    </Tag>
   )
 }

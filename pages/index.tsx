@@ -1,9 +1,16 @@
+import About from '@src/components/organisms/About'
+import Banners from '@src/components/organisms/Banners'
 import HomeLayout from '@templates/Home'
 import React from 'react'
 import { HomeCtl } from 'src/containers/home'
 
 const HomePage = ({}: any) => {
-  return <>hello home</>
+  return (
+    <>
+      <Banners />
+      <About />
+    </>
+  )
 }
 
 HomePage.layout = HomeLayout

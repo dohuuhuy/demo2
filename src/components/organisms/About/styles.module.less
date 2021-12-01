@@ -1,0 +1,88 @@
+.About {
+  .conAbout {
+    margin: 90px 0;
+    .rowAbout {
+      .colCard {
+        padding: 0 15px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        .card {
+          .cardBody {
+            padding: 40px 20px;
+            .btn {
+              background-color: #2962ff;
+              padding: 10px 15px;
+              min-width: 100px;
+              text-align: center;
+              border-radius: 8px;
+              color: white;
+              border: unset;
+              span {
+                margin: auto;
+              }
+            }
+          }
+        }
+      }
+      .colImage {
+        padding: 0 15px;
+        .listImageAbout {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-gap: 10px;
+          // background-color: #2196f3;
+          padding: 10px;
+
+          .item_0 {
+            figure {
+              text-align: right;
+              img {
+                max-width: 200px !important;
+                min-width: 200px !important;
+                max-height: 240px !important;
+                min-height: 240px !important;
+              }
+            }
+          }
+
+          .item_1 {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            // margin: auto;
+          }
+
+          .item_2 {
+            figure {
+              text-align: right;
+              img {
+                max-width: 160px !important;
+                min-width: 160px !important;
+                max-height: 200px !important;
+                min-height: 200px !important;
+              }
+            }
+          }
+
+          .item {
+            figure {
+              img {
+                border-radius: 8px;
+                width: 100%;
+                max-width: 255px;
+                min-width: 255px;
+                max-height: 320px;
+                min-height: 320px;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
