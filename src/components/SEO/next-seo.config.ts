@@ -1,14 +1,14 @@
 const SEO_DEFAULT = {
-  title: 'Medpro - Đặt lịch khám số 1 Việt Nam',
+  title: 'Demo - landing page Shop basic',
   description:
-    'Medpro, đặt khám trực tuyến, thanh toán viện phí, nhắc uống thuốc, khám chuyên khoa, bác sĩ, tư vấn sức khoẻ từ xa',
-  canonical: 'https://medpro.vn/',
+    'Nước hoa, dầu thơm, xịt phòng, xà phòng, sáp hương ... , chúng tôi có, bạn có muốn mua không ?',
+  canonical: '',
   noindex: true,
   openGraph: {
-    url: 'https://medpro.vn/',
-    title: 'Medpro - Đặt lịch khám số 1 Việt Nam',
+    url: '',
+    title: 'Demo - landing page Shop basic',
     description:
-      'Medpro, đặt khám trực tuyến, thanh toán viện phí, nhắc uống thuốc, khám chuyên khoa, bác sĩ, tư vấn sức khoẻ từ xa',
+      'Nước hoa, dầu thơm, xịt phòng, xà phòng, sáp hương ... , chúng tôi có, bạn có muốn mua không ?',
     images: [
       {
         url: 'https://cms.medpro.com.vn/uploads/d_e1b14f67d2.jpg',
