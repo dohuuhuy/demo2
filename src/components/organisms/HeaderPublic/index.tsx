@@ -10,12 +10,12 @@ const HeaderPublic = () => {
     <Container tag='header' fluid fixed className={styles.header}>
       <Container className={styles.conHeader}>
         <Row className={styles.rowMenu}>
-          <Col xl='6' className={styles.colLogo}>
+          <Col xl={6} sm={24} xs={24} className={styles.colLogo}>
             <figure>
               <img src='/images/logo/logoBranch.png' alt='Logo branch' />
             </figure>
           </Col>
-          <Col xl='18' className={styles.colListMenu}>
+          <Col xl={18} sm={24} className={styles.colListMenu}>
             <ul className={styles.listMenu}>
               {listMenu.map((v, i) => {
                 return (
