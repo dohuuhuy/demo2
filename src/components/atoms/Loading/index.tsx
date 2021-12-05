@@ -1,8 +1,8 @@
 import { LoadingOutlined } from '@ant-design/icons'
 import { Spin } from 'antd'
+import cx from 'classnames'
 import React from 'react'
 import styles from './styles.module.less'
-import cx from 'classnames'
 
 export interface Loading {
   text?: string
@@ -10,11 +10,13 @@ export interface Loading {
   top?: boolean
 }
 
-const Loading = ({
-  text = 'Vui lòng chờ trong giây lát ...',
-  component = false,
-  top
-}: Loading) => {
+const Loading = (props: Loading): JSX.Element => {
+  const {
+    text = 'Vui lòng chờ trong giây lát ...',
+    component = false,
+    top = false
+  } = props
+
   const antIcon = <LoadingOutlined style={{ fontSize: 60 }} spin={true} />
 
   return (

@@ -11,9 +11,13 @@ const HeaderPublic = () => {
       <Container className={styles.conHeader}>
         <Row className={styles.rowMenu}>
           <Col xl={6} sm={24} xs={24} className={styles.colLogo}>
-            <figure>
-              <img src='/images/logo/logoBranch.png' alt='Logo branch' />
-            </figure>
+            <Link href='/'>
+              <a>
+                <figure>
+                  <img src='/images/logo/logoBranch.png' alt='Logo branch' />
+                </figure>
+              </a>
+            </Link>
           </Col>
           <Col xl={18} sm={24} className={styles.colListMenu}>
             <ul className={styles.listMenu}>
