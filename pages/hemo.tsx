@@ -1,10 +1,9 @@
 import { DemoAnimation } from '@src/components/pages/DemoAnimation'
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const Demo = () => {
   return <DemoAnimation />
 }
 
-// Demo.layout = <></>
-
+Demo.layout = Fragment
 export default Demo
