@@ -6,7 +6,7 @@ export const listForm: FormInput[] = [
     type: 'text',
     label: '',
     placeholder: 'Name',
-    require: true,
+    require: 'true',
     autoComplete: 'off',
     enter: (props) => <input {...props} />
   },
@@ -15,7 +15,7 @@ export const listForm: FormInput[] = [
     type: 'text',
     label: '',
     placeholder: 'Email',
-    require: true,
+    require: 'true',
     autoComplete: 'off',
     enter: (props) => <input {...props} />
   },
@@ -24,7 +24,7 @@ export const listForm: FormInput[] = [
     type: 'text',
     label: '',
     placeholder: 'Mobile No',
-    require: true,
+    require: 'true',
     autoComplete: 'off',
     enter: (props) => <input {...props} />
   },
@@ -33,7 +33,7 @@ export const listForm: FormInput[] = [
     type: 'text',
     label: '',
     placeholder: 'Message',
-    require: true,
+    require: 'true',
     maxLength: 500,
     rows: 5,
     autoComplete: 'off',

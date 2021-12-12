@@ -3,9 +3,9 @@ export interface FormInput {
   type: string
   label: string
   placeholder: string
-  require: boolean
-  autoComplete: string
-  enter: (props: FormInput) => JSX.Element
+  require?: 'true' | 'false' | string
+  autoComplete?: string
+  enter?: ((props: FormInput) => JSX.Element) | any
   maxLength?: any
   rows?: any
 }

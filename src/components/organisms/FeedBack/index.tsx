@@ -26,7 +26,14 @@ const FeedBack = () => {
     <Container tag='section' fluid className={styles.FeedBack}>
       <Container className={styles.conFeedBack}>
         <Row className={styles.rowFeedBack}>
-          <Col xl={12} lg={12} md={12} className={styles.colCard}>
+          <Col
+            xl={12}
+            lg={12}
+            md={12}
+            sm={24}
+            xs={24}
+            className={styles.colCard}
+          >
             <div className={styles.card}>
               <div className={styles.cardBody}>
                 <h1>About us of Trực</h1>
@@ -35,13 +42,25 @@ const FeedBack = () => {
               </div>
             </div>
           </Col>
-          <Col xl={12} lg={12} md={12} className={styles.colForm}>
+          <Col
+            xl={12}
+            lg={12}
+            md={12}
+            sm={24}
+            xs={24}
+            className={styles.colForm}
+          >
             <form className={styles.form} onSubmit={onSubmit}>
               <ul className={styles.listForm}>
-                {listForm.map((v, i) => {
+                {listForm?.map((v, i) => {
+                  const propsInput = { ...v }
+                  delete propsInput.enter
+
                   return (
                     <li key={i} className={styles.itemForm}>
-                      <div className={styles.formInput}>{v.enter(v)}</div>
+                      <div className={styles.formInput}>
+                        {v?.enter(propsInput)}
+                      </div>
                     </li>
                   )
                 })}

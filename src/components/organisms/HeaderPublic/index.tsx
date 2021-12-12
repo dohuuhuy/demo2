@@ -7,10 +7,10 @@ import styles from './styles.module.less'
 
 const HeaderPublic = () => {
   return (
-    <Container tag='header' fluid fixed className={styles.header}>
+    <Container tag='header' fluid={true} fixed={true} className={styles.header}>
       <Container className={styles.conHeader}>
         <Row className={styles.rowMenu}>
-          <Col xl={6} sm={24} xs={24} className={styles.colLogo}>
+          <Col xl={6} lg={6} md={0} sm={24} xs={24} className={styles.colLogo}>
             <Link href='/'>
               <a>
                 <figure>
@@ -19,7 +19,7 @@ const HeaderPublic = () => {
               </a>
             </Link>
           </Col>
-          <Col xl={18} sm={24} className={styles.colListMenu}>
+          <Col xl={18} lg={18} md={24} sm={0} className={styles.colListMenu}>
             <ul className={styles.listMenu}>
               {listMenu.map((v, i) => {
                 return (
